@@ -1,0 +1,354 @@
+
+AZ-400 
+
+Orientation : 29th Mar. 2025 (1Hr.)
+
+Start Date : 5th April 2025 (3 Hrs. 8:30PM IST - 11:30PM IST)
+
+#######################
+Day 1 : 5th April 2025
+#######################
+
+Agenda: 
+	Introduction to DevOps 
+	Introduction to Azure DevOps Service 
+	
+	Lab : Azure Free Tier Account 
+	
+Pre-requisities :
+	Good to have Linux fundamentals
+	
+
+
+Introduction to DevOps :::
+
+	What is DevOps?
+	
+
+	Software / Applications :
+	
+		- Desktop Applications
+		- Web Applications 
+		- Mobile Applications
+		- Embedded Applications ( IoT)
+		
+	SDLC : Software Development Life Cycle:
+	
+	- Requirement Analysis 
+	- Design & Documentation
+	- Code / Develop
+	- Test 
+	- Implement to Production 
+	- Maintain / Monitor
+	
+	Waterfall Model :
+	
+		- Top-Down Approach - Linear fashion
+		- Monolith Application Architecture
+		
+		- Desktop Applications ::
+		
+			--> Retail Customer : Super-Market - Billing & Sales Management
+									-> User Interface 
+									-> Stock Mgmt
+									-> Billing 
+									-> Payment : CASH 
+										--> Online/CASH/UPI/CARD
+									-> Inventory Mgmt
+				
+		Core Project :
+		
+		- Requirement Analysis 			18-Months 
+		- Design & Documentation
+		- Code / Develop				7th Month 
+		- Test 
+		- Implement to Production 
+		- Maintain / Monitor
+		
+		Enhancement Project : --> Online/CASH/UPI/CARD
+		
+		- Requirement Analysis 		
+		- Design & Documentation	
+		- Code / Develop			
+		- Test 	
+		- Implement to Production 	
+		- Maintain / Monitor	
+
+	
+	AGILE Methodologies :
+	
+		- Based on Iterations:
+			- Functions/Modules ==> Iterations
+			
+			
+	Iteration1: User Interface design
+	
+		- Requirement Analysis 		
+		- Design & Documentation	
+		- Code / Develop			
+		- Test 	
+		- Implement to Production with manual approvals	
+		
+		- Maintain / Monitor	
+	
+	Iteration2: Stock Mgmt
+	
+		- Requirement Analysis 		
+		- Design & Documentation	
+		- Code / Develop			
+		- Test 	
+		- Implement to Production with manual approvals	 
+		
+		- Maintain / Monitor	
+	
+	
+	Iteration nth: Online/CASH/UPI/CARD
+	
+		- Requirement Analysis 		
+		- Design & Documentation	
+		- Code / Develop			
+		- Test 	
+		- Implement to Production with manual approvals	 
+		
+		- Maintain / Monitor
+		
+	
+	Using AGILE Methodologies :
+	
+		We can able to achieve :
+		
+			- Continuous Development
+			- Continuous Integration 
+			- Continuous Testing 
+			- Continuous Delivery 
+				- It used to release the product/changes to production Environment
+				- It expect the Manual Approvals.
+			
+		We cannot achieve :
+		
+			- Continuous Deployment
+				- It used to release the product/changes to production Environment
+				- It never expect the Manual Approvals.			
+	
+	What is DevOps? 
+	
+		DevOps is a Software Development Strategy, which promote the collaboration between the teams like Development Team and Operations Teams to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in more automated fashion.
+		
+	How to Implement DevOps?
+	
+	Identify the Teams involved in SDLC Process :
+		
+		- Infra-Structure Management Team 
+		- Application Development Team 			Appln. Module 
+		- Testing Team
+		- Release Management Team 
+		- Production Support Team 
+		- Production Monitoring Team 
+		- IT Security Management Team 
+		
+	Environments:
+	
+		Non-Prod Environments									Production Environments
+		
+			Dev Environment
+			
+			Build Environment
+			
+			Test Environments
+				- QA 
+				
+				- UAT 					=============>				Production Servers 		
+			
+	Application Architecture :	
+	
+		- Monolith Application Architecture
+			- The Application components are tightly coupled with each other.
+			- It is not possible to independently implement the changes to prod.
+			- Here all the functions are defined on a single Application Routine.
+			- With this we can just achieve Continuous Delivery		
+		
+		- Micro-Service Based Application Architecture
+		
+			- The Entire Application is divided into Micro-Services 
+			- Each Micro-Service can be independently developed and implement to prod.
+			- With this we can achieve Continuous Deployment
+			
+			
+		Web Application :
+		
+		sign-up
+		
+		sign-in 
+		
+		
+	DevOps Stages :
+	
+		- Continuous Development :
+		
+			- It is capability of Application Team to Continuously develop the code changes for further implementation.
+			- It aims to improve the Developers' productivity.
+			
+			Role of Application Developer :
+			
+				- To Create Application Source Code.
+				
+				- Create Source Code 
+				- Manual Build (Is a process of Compiling the Source Code & Create Artifacts(Binaries - *.war/*.jar/*.dll/*.exec))
+				- Unit Testing 
+				- Promote the Changes to Test Environment
+				- Manually send the Email Notifications to Testing Teams
+			
+			Using DevOps Approach :
+
+				- Create Source Codes 
+				- Save/Commit the Source Codes in the Source Code Repository(GitHub/Azure Repo)
+				
+				Automate :
+			
+				- Build (Is a process of Compiling the Source Code & Create Artifacts(Binaries - *.war/*.jar/*.dll/*.exec))
+				- Unit Testing 
+				- Promote the Changes to Test Environment
+				- Send the Email Notifications to Testing Teams		
+
+			Tools: 
+				- IDEs - Eclipse/Pycharm/Eclipse Based IDEs - Visual Studio Code / Visual Studio
+				- Git/GitHub/Azure Repo
+				
+		
+		- Continuous Integration::
+
+			- It is capability of Application Team to Continuously Integrate the code changes for further testing.
+
+				Automate :
+			
+				- Build (Is a process of Compiling the Source Code & Create Artifacts(Binaries - *.war/*.jar/*.dll/*.exec))
+				- Unit Testing 
+				- Promote the Changes to Test Environment
+				- Send the Email Notifications to Testing Teams	
+				
+			Tools :
+			
+				- IDEs - Eclipse/Pycharm/Eclipse Based IDEs - Visual Studio Code / Visual Studio
+				- Git/GitHub/Azure Repo
+				- Jenkins / Azure Pipelines / Docker / Kubernetes / Ansible 
+
+				
+		- Continuous Testing::
+
+			- It is capability of Testing Team to Continuously Test the code changes for further Implementation.
+			
+			Tools :
+			
+				- Junit/TestNG/Selenium
+				- Jenkins/Azure Pipelines/Azure Artifacts/Azure Test 
+				
+
+		- Continuous Delivery / Deployment::
+
+			- Both Continuous Delivery & Continuous Deployment are used to promote the changes to Production Environments.
+
+			- Continuous Delivery :
+			
+				- It expect the Manual Approvals for Production Releases.
+				- Expect Application Down-Time.
+
+				Eg.:
+				
+					Online Banking : v1.0 ==> v2.0
+					
+						Open Production Release Window : 
+						
+							4 - 6 Hrs. (Application Downtime) - 
+							
+							Prod Testing ==> Fix the issue else revert the changes
+
+						
+			- Continuous Deployment :
+			
+				- It never expect the Manual Approvals for Production Releases.	
+				- This can be achived only using Micro-Service Based Application Architecture.
+				- Achieve Production Releases without any down-time.
+		
+				Eg.: amazon/facebook/netflix
+						
+						
+			www.amazon.com 
+			
+			Sign-Up 			- Micro-Service1 - Developer1 - Independently Code - Integrate for further testing --> Release for Prod Environments
+			Sign-In 			- Micro-Service2 - Developer2 - Independently Code - Integrate for further testing --> Release for Prod Environments
+			Search
+			Add to Cart 
+			Place the Order
+			Make Payment 
+			Confirm Order 
+			Track 
+			
+			
+			- Tools :
+			
+				- Jenkins / Azure Pipelines / Azure Artifacts / 
+				- Docker / Kubernetes / ACS / ACR / AKS 
+				
+		
+		- Continuous Monitoring::
+		
+			- It used to ensure high availability of Applications and the Infra-Structure.		
+			- To ensure business continueity
+			
+			- Infra-Structure Monitoring 
+			
+				- Azure Monitors / Dynatrace
+			
+			- Application Monitoring 
+		
+				- DataDog / AppDynamics 
+				
+	DevOps Tools :::
+
+		- Open-Source DevOps Tools:
+			- Jenkins/GitHub/Docker/Kubernetes/Ansible/Terraform/Prometheus/Grafana
+		
+		- Managed Services: (SAAS)
+		
+			AZURE	:  AzBoards,AzRepos,AzPipelines,AzTest,AzArtifacts
+			
+			AWS 	:  AWS Developer Tools - CodeCommit,CodeBuild,CodePipeline, etc......
+			
+			GCP 	:  DevOps Servifces 
+			
+			
+	Azure DevOps Services ::: Az-400 - Azure DevOps Certification Code.
+	
+		AzBoards,AzRepos,AzPipelines,AzTest,AzArtifacts
+		
+
+	Waterfall/AGILE/DevOps/DevSecOps/GitOps/AIOps/MLOps/SRE...
+	
+	
+	DevOps Resource :
+	
+		DevOps Process 
+		
+		DevOps Tools 
+		
+		Core Concepts to be clear based on real-time scenarios
+		
+		Basic Scripting Knowledge :
+			
+			- Shell Scripting / *.yaml Scripting / *.python Scripting / groovy Scripting
+			
+			
+	Azure DevOps Services :
+	
+		- Create Azure Account(Free Tier - 1 Month - $200)
+		
+			- Enable Parallel Build Request.
+		
+		- GitHub --> Source Code / Training Class_Notes 
+		
+		- DockerHub Account 
+		
+		
+Next :
+
+	Start with Azure DevOps Services - Azure Board
