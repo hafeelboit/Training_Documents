@@ -352,3 +352,431 @@ Introduction to DevOps :::
 Next :
 
 	Start with Azure DevOps Services - Azure Board
+
+
+
+#######################
+Day 2 : 6th April 2025
+#######################	
+
+	Working with Azure DevOps Services!
+	
+	Overview of All Azure DevOps Services 
+	
+	Create Azure Cloud Account 
+	
+	Continuous Development
+	
+	- Source Management using GitHub/Azure Repo.
+	
+	GIT / GITHUB : 
+	
+	
+	Azure DevOps Services :
+	
+		Application Builds and Deployments :
+		
+		ALM Tool : Application LifeCycle Management Tool 
+		
+			- Used to track the end-to-end project activities.
+			
+			- Jira - Agile Projects 
+	
+	
+	
+		Azure Boards 
+		
+		Azure Repos 
+		
+		Azure Pipelines 
+		
+		Azure Test Plans 
+		
+		Azure Artifacts
+	
+	
+	index.html 
+	
+	---
+	-
+	--
+	-
+	-
+	-
+	-
+	
+	save as index.html 
+	
+	Using VCS like github/git 
+	
+	index.html 
+	
+	---
+	-
+	--
+	-
+	-
+	-
+	-
+	
+	save as index.html 			===>	index.html_v1.0			==> Version Number/Tag/Commit_id
+	
+	index.html 
+	
+	---
+	-
+	--
+	-
+	-asdfsd
+	-asdfasdfadsf
+	-	adfasdf
+	
+	save as index.html 			===>	index.html_v1.1			==> Version Number/Tag/Commit_id		==> 	mywebapp.war_SNAP_SHOT_v1.1 
+	
+	save as index.html 			===>	index.html_v1.2			==> Version Number/Tag/Commit_id		==> 	mywebapp.war_SNAP_SHOT_v1.2 		
+	
+	save as index.html 			===>	index.html_v1.3			==> Version Number/Tag/Commit_id		==> 	mywebapp.war_SNAP_SHOT_v1.3
+	                                                                                                    
+	save as index.html 			===>	index.html_v1.4			==> Version Number/Tag/Commit_id	    ==> 	mywebapp.war_SNAP_SHOT_v1.4
+	
+	
+	
+	Container Images 
+	
+	Container Registry 		--> Used to version control/Manage the Application Container Iamges
+	
+		
+	mywebapp.war_SNAP_SHOT_v1.1 				===>		mywebapp_image:v1.1
+	
+	mywebapp.war_SNAP_SHOT_v1.2 				===>		mywebapp_image:v1.2
+		
+	mywebapp.war_SNAP_SHOT_v1.3					===>		mywebapp_image:v1.3
+		
+	mywebapp.war_SNAP_SHOT_v1.4					===>		mywebapp_image:v1.4
+
+
+	Containerization using Azure Container Services :
+	
+		ACS / ACR / AKS 
+	
+	
+	
+	
+	DevOps Life Cycle :
+	
+	- Non-Containerized Application 
+	
+		1. Developer Created the Source Code 
+		2. Commit the Changes to Source Code Repository (github/AzRepos)
+		
+	Using DevOps CICD Pipeline :
+	
+		1. SCM_Checkout --> Download the SourceCode from Source Code Repository to Build Environment
+		2. Application Build (Compile the source code and create artifacts -  mywebapp.war)
+		3. Unit Test 
+		4. Promote the Application Artifacts to QA Environment
+		5. Automated QA Testing (Testing Team)
+		6. Promote the Application Artifacts to UAT Environment
+		7. Automated/Manual UAT Testing (Done by the Business Users)
+	
+		8. Promote the Application Artifacts to Prod Environment
+	
+	
+	- Containerized Applications : Docker & Kubernetes
+	
+		1. Developer Created the Source Code 
+		2. Commit the Changes to Source Code Repository (github/AzRepos)
+		
+	Using DevOps CICD Pipeline :
+	
+		1. SCM_Checkout --> Download the SourceCode from Source Code Repository to Build Environment
+		2. Application Build (Compile the source code and create artifacts -  mywebapp.war)
+		2.1 Applications Container Image Build using ACS - mywebapp_image:v1.1
+		2.2 Publish the Container Image to Container Registry using ACR
+		3. Unit Test 
+		4. Deploy the Application Container Images to QA Environment
+		5. Automated QA Testing (Testing Team)
+		6. Deploy the Application Container Images to UAT Environment
+		7. Automated/Manual UAT Testing (Done by the Business Users)
+	
+		8. Deploy the Application Container Images to Prod Environment	
+		
+		
+		
+	Pre-requisities :
+	
+		- Create Azure Cloud Account 
+		
+			https://portal.azure.com/signin/index/	
+
+				To create Azure Cloud Account :
+				
+					- Active Email_ID 
+					
+					- Active Mobile Number 
+					
+					- Active Credit/Debit Card(Enabled with International Transaction)	
+
+			Free Account is eligible for 12 Months 
+			
+			$200 for initial 1 Month. 
+			
+			From 2nd Month, it be Pay-As-You-Go Model for some service.
+			
+			https://aex.dev.azure.com/			
+			
+		- Github Account 
+		
+			https://github.com/
+		
+		- DockerHub Account 
+		
+			https://hub.docker.com/
+		
+		- Install Visual Studio Code (IDE)
+
+			https://code.visualstudio.com/download
+			
+			#Visual Studio 				# .Net Developers
+			
+			#Eclipse 					# Java Developers
+
+		
+		- Install git client in the local Machine 
+	
+			https://git-scm.com/downloads		
+			
+			open git bash terminal 
+			
+				$ git --version
+		
+		
+		
+		Azure DevOps Services :
+		
+			1. Create Azure DevOps Organization 
+			2. Create Azure DevOps Project within the Organization
+			3. Within the Project we can create create 
+					Azure Boards, 
+					Azure Repos, 
+					Azure Pipelines, 
+					Azure Test, 
+					Azure Artifacts
+					
+					
+		Create Azure DevOps Organization :
+			
+	Git/GitHub/AzRepos :::
+	
+	
+	Source Code Management System: 
+	
+	Version Control System :
+	
+		- Is used version control the Source Code Changes --> (version number/tag/commit_id)
+		- Is used to track the Changes 
+		
+	
+	Types of Version Control System:
+
+		Local Version Control System 
+
+		Centralized Version Control System
+
+		Distributed Version Control System: 
+	
+	
+	
+	
+	Distributed Version Control System
+	
+		- GIT is the Open-Source Distributed VCS 
+		- Is used version control the Source Code Changes --> (version number/tag/commit_id)
+		- Is used to track the Changes 	
+		- It is used to perform Parallel Development using Git Branching Techniques.
+		
+		- Using GIT Cli Command 
+		
+		
+	GIT CLI commands :
+
+		git push : push the latest changes from the local machine to remote git repository
+		
+		git pull : to download the latest changes from remote repo to local machine - keep the changes in-sync with the remote repo.
+		
+
+	Git Branches : 
+		
+		- It is used to perform Parallel Development without impacting others' changes.
+		
+		- Default Branch called (master/main)
+			- It is considered as a production version of source code
+		
+	Git Branching Strategies :
+	
+		- Are used to maintain the integrity of the main/master branch
+		
+		
+	Scenario 1 :
+	
+		Developer 
+		
+			Repository :
+				
+				master - c1,c2,c3
+				
+							c1,c2,c3,f1cm1,f1cm2			# Upon merging feature1 changes
+				
+					feature1 - c1,c2,c3
+					
+								- c1,c2,c3,f1cm1,f1cm2 -- merge to master 
+								
+								
+	Scenario 2 :
+	
+		Developer 
+		
+			Repository :
+				
+				master - c1,c2,c3
+				
+							c1,c2,c3,c4			(c4 is upon merging changes from Developer_Branch)
+				
+					Developer_Branch : c1,c2,c3
+					
+							c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+				
+						feature1 - c1,c2,c3
+						
+								c1,c2,c3,f1cm1,f1cm2,f1cm3
+					
+						feature2 - c1,c2,c3 
+						
+								c1,c2,c3,f2cm1,f2cm2,f2cm3
+	
+	
+	Scenario 3 :
+	
+		Developer 
+		
+			Repository :
+				
+				master - c1,c2,c3
+				
+						c1,c2,c3,c4 				(c4 is upon merging changes from Integration_Branch)
+				
+					Integration_Branch - c1,c2,c3
+					
+							c1,c2,c3,Developer1_Changes,Developer2_Changes
+				
+						Developer1_Branch : c1,c2,c3
+						
+								c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+					
+							feature1 - c1,c2,c3
+							
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+						
+							feature2 - c1,c2,c3 
+							
+									c1,c2,c3,f2cm1,f2cm2,f2cm3	
+		
+
+						Developer2_Branch : c1,c2,c3
+						
+								c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+					
+							feature1 - c1,c2,c3
+							
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+						
+							feature2 - c1,c2,c3 
+							
+									c1,c2,c3,f2cm1,f2cm2,f2cm3		
+		
+	
+	
+	Scenario 4 :
+	
+		Developer 
+		
+			Repository :
+				
+				master - c1,c2,c3
+				
+						c1,c2,c3,c4 				(c4 is upon merging changes from Release_Branch)
+				
+				
+					Release_Branch - c1,c2,c3
+					
+								c1,c2,c3,Team1_Changes,Team2_Changes			
+					
+				
+						Integration_Branch - c1,c2,c3																# Team1 
+						
+								c1,c2,c3,Developer1_Changes,Developer2_Changes
+					
+							Developer1_Branch : c1,c2,c3
+							
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+						
+								feature1 - c1,c2,c3
+								
+										c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+								feature2 - c1,c2,c3 
+								
+										c1,c2,c3,f2cm1,f2cm2,f2cm3			
+
+							Developer2_Branch : c1,c2,c3
+							
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+						
+								feature1 - c1,c2,c3
+								
+										c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+								feature2 - c1,c2,c3 
+								
+										c1,c2,c3,f2cm1,f2cm2,f2cm3		
+			
+				
+						Integration_Branch - c1,c2,c3																# Team2
+						
+								c1,c2,c3,Developer1_Changes,Developer2_Changes
+					
+							Developer1_Branch : c1,c2,c3
+							
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+						
+								feature1 - c1,c2,c3
+								
+										c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+								feature2 - c1,c2,c3 
+								
+										c1,c2,c3,f2cm1,f2cm2,f2cm3			
+
+							Developer2_Branch : c1,c2,c3
+							
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+						
+								feature1 - c1,c2,c3
+								
+										c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+								feature2 - c1,c2,c3 
+								
+										c1,c2,c3,f2cm1,f2cm2,f2cm3		
+				
+			
+			
+Next ::
+
+	Azure Boards 
+	Azure Repos 
+	Azure Pipelines
+				
+			
+		
+		
